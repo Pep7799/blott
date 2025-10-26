@@ -90,8 +90,8 @@ export default function Home() {
     },
   ];
   return (
-    <div className="flex gap-4 flex-col bg-[#0E0D13] text-white">
-      <div className="flex items-center py-6 justify-center max-sm:border-b-2">
+    <div className="flex gap-4 flex-col bg-[#0E0D13]">
+      <div className="flex items-center py-6 justify-center max-sm:border-b-2 max-sm:border-gray-700">
         <Image src={blott} alt="logo" />
       </div>
       <div className="py-10 px-12 font-medium text-5xl max-sm:font-bold max-sm:text-2xl">
@@ -102,16 +102,16 @@ export default function Home() {
         {data.map((item, index) => (
           <div
             key={index}
-            className="p-4 flex gap-2 flex-col max-sm:gap-4"
+            className="p-4 flex gap-2 flex-col max-sm:flex max-sm:gap-4 max-sm:justify-between"
           >
-            <div>
+            <div className="">
               <Image
                 src={item.image}
                 alt="logo"
                 className="w-full h-56 object-contain"
               />
             </div>
-            <div>
+            <div className="">
               <div className="justify-between flex text-xs leading-4 uppercase">
                 <p className="">{item.title}</p>
                 <p>{item.date}</p>
